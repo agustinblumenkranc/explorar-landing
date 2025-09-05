@@ -1,1 +1,2 @@
+DESCARGARLO COMO ZIP, NO CLONARLO
 PONER npm install --force
