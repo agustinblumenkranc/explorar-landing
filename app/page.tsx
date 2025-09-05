@@ -21,7 +21,7 @@ export default function LandingPage() {
 
   return (
     <div className="contenedor-principal">
-      {/* Sección 1: Header/Navegación */}
+      {/* Sección 1 */}
       <header className="encabezado">
         <div className="contenido-encabezado">
           <div className="logo">
@@ -35,7 +35,7 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Sección 2: Hero/Bienvenida mejorada */}
+      {/* Sección 2 */}
       <section className="seccion-hero">
         <div className="fondo-hero">
           <img src="/beautiful-panoramic-view-of-buenos-aires-skyline-w.png" alt="Buenos Aires" className="imagen-fondo-hero" />
@@ -103,7 +103,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Sección 4: Características principales */}
+      {/* Sección 4 */}
       <section className="seccion-caracteristicas">
         <div className="contenido-caracteristicas">
           <h2 className="titulo-seccion">¿Por qué elegir ExplorAR?</h2>
@@ -131,7 +131,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Sección 5: Actividades destacadas mejoradas */}
+      {/* Sección 5 */}
       <section className="seccion-destacadas">
         <div className="contenido-destacadas">
           <h2 className="titulo-seccion">Actividades destacadas</h2>
@@ -173,7 +173,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Sección 6: Testimonios */}
+      {/* Sección 6 */}
       <section className="seccion-testimonios">
         <div className="contenido-testimonios">
           <h2 className="titulo-seccion">Lo que dicen nuestros usuarios</h2>
@@ -198,7 +198,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Sección 7: Llamada a la acción */}
+      {/* Sección 7*/}
       <section className="seccion-cta">
         <div className="contenido-cta">
           <h2>¿Listo para explorar Argentina?</h2>
@@ -207,7 +207,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Sección 8: Footer */}
+      {/* Sección 8 */}
       <footer className="pie-pagina">
         <div className="contenido-footer">
           <div className="info-footer">
