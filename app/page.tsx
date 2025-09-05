@@ -25,7 +25,7 @@ export default function LandingPage() {
       <header className="encabezado">
         <div className="contenido-encabezado">
           <div className="logo">
-            <span className="icono-estrella">⭐</span>
+            <span className="icono-estrella"><img src="/Group 21.png" alt="" /></span>
             <h1>ExplorAR</h1>
           </div>
           <nav className="navegacion">
@@ -212,7 +212,7 @@ export default function LandingPage() {
         <div className="contenido-footer">
           <div className="info-footer">
             <div className="logo-footer">
-              <span className="icono-estrella">⭐</span>
+              <span className="icono-estrella"><img src="/Group 21.png" alt="" /></span>
               <span>ExplorAR</span>
             </div>
             <p>Tu guía para descubrir Argentina</p>
