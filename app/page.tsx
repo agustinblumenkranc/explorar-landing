@@ -42,10 +42,6 @@ export default function LandingPage() {
         </div>
         <div className="contenido-hero">
           <h2 className="titulo-principal">Descubrí Argentina como nunca antes</h2>
-          <p className="subtitulo">
-            Encontrá los mejores restaurantes y actividades turísticas en todo el país. Tu próxima aventura te está
-            esperando.
-          </p>
           <div className="barra-busqueda">
             <input
               type="text"
@@ -59,6 +55,11 @@ export default function LandingPage() {
               Buscar
             </button>
           </div>
+          <p className="subtitulo">
+            Encontrá los mejores restaurantes y actividades turísticas en todo el país. Tu próxima aventura te está
+            esperando.
+          </p>
+          
 
           {resultadosBusqueda.length > 0 && (
             <div className="resultados-busqueda">
@@ -80,21 +81,18 @@ export default function LandingPage() {
             <div className="paso-item">
               <div className="paso-numero">1</div>
               <div className="paso-icono">
-                <img src="/magnifying-glass-search-icon.png" alt="Buscar" />
               </div>
               <h3>Buscá</h3>
               <p>Explorá miles de restaurantes y actividades en toda Argentina</p>
             </div>
             <div className="paso-item">
               <div className="paso-numero">2</div>
-              <div className="paso-icono">⭐</div>
               <h3>Elegí</h3>
               <p>Leé reseñas y compará opciones para encontrar lo perfecto</p>
             </div>
             <div className="paso-item">
               <div className="paso-numero">3</div>
               <div className="paso-icono">
-                <img src="/celebration-party-confetti-icon.png" alt="Disfrutar" />
               </div>
               <h3>Disfrutá</h3>
               <p>Reservá y viví experiencias increíbles en tu destino favorito</p>
@@ -110,20 +108,20 @@ export default function LandingPage() {
           <div className="grid-caracteristicas">
             <div className="tarjeta-caracteristica">
               <div className="icono-caracteristica">
-                <img src="/restaurant-dining-fork-knife-icon.png" alt="Restaurantes" />
               </div>
+              <div className="paso-numero">1</div>
               <h3>Restaurantes</h3>
               <p>Miles de opciones gastronómicas en toda Argentina</p>
             </div>
             <div className="tarjeta-caracteristica">
               <div className="icono-caracteristica">
-                <img src="/tourist-attractions-monument-building-icon.png" alt="Actividades" />
               </div>
+              <div className="paso-numero">2</div>
               <h3>Actividades</h3>
               <p>Experiencias turísticas únicas en cada provincia</p>
             </div>
             <div className="tarjeta-caracteristica">
-              <div className="icono-caracteristica">⭐</div>
+              <div className="paso-numero">3</div>
               <h3>Reseñas</h3>
               <p>Opiniones reales de otros viajeros como vos</p>
             </div>
