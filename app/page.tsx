@@ -136,18 +136,18 @@ export default function LandingPage() {
           <div className="grid-actividades">
             <div className="tarjeta-actividad">
               <div className="imagen-actividad">
-                <img src="/colorful-street-art-in-la-boca-buenos-aires.png" alt="Tour por Caminito" />
+                <img src="/image 9.png" alt="Tour por Caminito" />
               </div>
               <div className="info-actividad">
                 <h3>Tour por Caminito</h3>
-                <div className="estrellas">⭐⭐⭐⭐⭐</div>
+                <div className="estrellas">⭐⭐⭐⭐</div>
                 <p className="descripcion">Recorrido por el famoso barrio de La Boca</p>
                 <div className="precio">Desde $12.000</div>
               </div>
             </div>
             <div className="tarjeta-actividad">
               <div className="imagen-actividad">
-                <img src="/wine-tasting-in-mendoza-vineyard-argentina.png" alt="Degustación de vinos" />
+                <img src="/image 16.png" alt="Degustación de vinos" />
               </div>
               <div className="info-actividad">
                 <h3>Degustación de vinos</h3>
@@ -158,7 +158,7 @@ export default function LandingPage() {
             </div>
             <div className="tarjeta-actividad">
               <div className="imagen-actividad">
-                <img src="/mountain-trekking-in-bariloche-patagonia.png" alt="Trekking en Bariloche" />
+                <img src="/image 18.png" alt="Trekking en Bariloche" />
               </div>
               <div className="info-actividad">
                 <h3>Trekking en Bariloche</h3>
