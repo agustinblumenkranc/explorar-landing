@@ -607,7 +607,7 @@ body {
 
 .boton-cta {
   /* Mejorando botón CTA */
-  background: #d97706;
+  background: rgb(255, 217, 0);
   border: none;
   padding: 1.2rem 3.5rem;
   border-radius: 30px;
