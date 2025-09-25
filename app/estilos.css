@@ -613,7 +613,7 @@ body {
   border-radius: 30px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: white;
+  color: rgb(8, 2, 2);
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
