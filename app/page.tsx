@@ -164,7 +164,7 @@ export default function LandingPage() {
                 <h3>Trekking en Bariloche</h3>
                 <div className="estrellas">⭐⭐⭐⭐⭐</div>
                 <p className="descripcion">Aventura en la Patagonia argentina</p>
-                <div className="precio">Desde $8.000</div>
+                <div className="precio">Desde $20.000</div>
               </div>
             </div>
           </div>
@@ -200,7 +200,6 @@ export default function LandingPage() {
       <section className="seccion-cta">
         <div className="contenido-cta">
           <h2>¿Listo para explorar Argentina?</h2>
-          <p>Únete a miles de viajeros que ya descubrieron su próximo destino favorito</p>
           <button className="boton-cta">Comenzar ahora</button>
         </div>
       </section>

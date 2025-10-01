@@ -540,10 +540,12 @@ body {
   padding: 2.5rem;
   /* Mejorando estilo de testimonios */
   background: #D7E9F5;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: left;
   transition: all 0.3s ease;
   border-left: 4px solid #0891b2;
+    border: 2px solid #110909; ;
+
 }
 
 .tarjeta-testimonio:hover {
@@ -555,19 +557,19 @@ body {
   width: 60px;
   height: 60px;
   /* Actualizando color del avatar */
-  background: #0891b2;
+  background: #4CAF50;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #000000;
   font-weight: bold;
   flex-shrink: 0;
   font-size: 1.2rem;
 }
 
 .contenido-testimonio h4 {
-  color: #333;
+  color: #0A2342;
   margin-bottom: 0.5rem;
 }
 
@@ -579,9 +581,9 @@ body {
 
 /* Sección 7: CTA mejorada */
 .seccion-cta {
-  padding: 5rem 0;
+  padding: 10rem 0;
   /* Actualizando color de fondo del CTA */
-  background: linear-gradient(135deg, #0891b2 0%, #67e8f9 100%);
+  background: linear-gradient(135deg, #64B8E4 0%, #64B8E4 100%);
   text-align: center;
   position: relative;
 }
@@ -594,7 +596,7 @@ body {
 
 .contenido-cta h2 {
   font-size: 2.5rem;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
 }
 
@@ -609,14 +611,16 @@ body {
   /* Mejorando botón CTA */
   background: rgb(255, 217, 0);
   border: none;
-  padding: 1.2rem 3.5rem;
+  padding: 1rem 4rem;
   border-radius: 30px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: rgb(8, 2, 2);
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+      border: 2px solid #110909; ;
+
 }
 
 .boton-cta:hover {
@@ -627,7 +631,7 @@ body {
 
 /* Sección 8: Footer */
 .pie-pagina {
-  background: #374151;
+  background: #1647A4;
   color: white;
   padding: 3rem 0 1rem;
 }
