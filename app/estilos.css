@@ -26,6 +26,7 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.6s ease-out; 
 }
 
 .contenido-encabezado {
@@ -51,6 +52,7 @@ body {
 
 .icono-estrella {
   font-size: 1.5rem;
+  animation: spinPulse 3s infinite linear;
 }
 
 .navegacion {
@@ -66,12 +68,14 @@ body {
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
+  transform-origin: center;
 }
 
 .boton-iniciar-sesion:hover {
   background: white;
   /* Actualizando color hover */
   color: #0F3680;
+  transform: scale(1.05);
 }
 
 .boton-registrarse {
@@ -84,10 +88,14 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .boton-registrarse:hover {
   background: #132c3d;
+  color: rgb(238, 254, 255);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Sección 2: Hero mejorada */
@@ -98,6 +106,7 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  animation: backgroundBreathing 10s infinite alternate;
 }
 
 /* Agregando fondo animado para el hero */
@@ -137,6 +146,7 @@ body {
   padding: 0 2rem;
   position: relative;
   z-index: 2;
+  animation: zoomIn 1s ease-out;
 }
 
 .titulo-principal {
@@ -163,6 +173,7 @@ body {
   color: white;
   margin-bottom: 2rem;
   opacity: 0.9;
+  animation: aparecer 1.2s ease-out 0.3s both;
 }
 
 .barra-busqueda {
@@ -171,6 +182,7 @@ body {
   margin: 0 auto;
   gap: 0.5rem;
   margin-bottom: 40px;
+  animation: slideInLeft 1s ease-out 0.6s both;
 }
 
 .input-busqueda {
@@ -179,6 +191,12 @@ body {
   border: none;
   border-radius: 25px;
   font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-busqueda:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #F4C21C, 0 0 0 8px rgba(244, 194, 28, 0.4);
 }
 
 .boton-buscar {
@@ -198,6 +216,7 @@ body {
   background: #b45309;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4);
+  animation: pulseOnce 0.3s ease-out;
 }
 
 /* Nueva sección de estadísticas en el hero */
@@ -212,8 +231,12 @@ body {
 .stat-item {
   text-align: center;
   color: white;
-  animation: contarNumeros 2s ease-out 0.5s both;
+  animation: contarNumeros 1.5s ease-out both;
 }
+
+.stat-item:nth-child(1) { animation-delay: 0.8s; }
+.stat-item:nth-child(2) { animation-delay: 1s; }
+.stat-item:nth-child(3) { animation-delay: 1.2s; }
 
 .stat-numero {
   font-size: 2.5rem;
@@ -232,11 +255,11 @@ body {
 @keyframes contarNumeros {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px) scale(0.9);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -267,12 +290,17 @@ body {
   background: #D7E9F5;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
-  animation: deslizarArriba 0.8s ease-out;
+  animation: slideInRight 0.8s ease-out backwards;
   border: 2px solid rgb(3, 3, 3);
 }
 
+.paso-item:nth-child(1) { animation-delay: 0.2s; }
+.paso-item:nth-child(2) { animation-delay: 0.4s; }
+.paso-item:nth-child(3) { animation-delay: 0.6s; }
+
+
 .paso-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) rotateZ(1deg);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -291,6 +319,7 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
+  animation: pulseOutline 2s ease-in-out infinite;
 }
 
 .paso-icono img {
@@ -357,7 +386,7 @@ body {
 }
 
 .tarjeta-caracteristica:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   /* Mejorando sombra y borde hover */
   box-shadow: 0 15px 40px rgba(8, 145, 178, 0.15);
   border-color: #0891b2;
@@ -368,6 +397,11 @@ body {
   height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(8, 145, 178, 0.2));
+  transition: transform 0.4s ease;
+}
+
+.tarjeta-caracteristica:hover .icono-caracteristica img {
+  transform: rotateY(180deg);
 }
 
 .tarjeta-caracteristica h3 {
@@ -401,21 +435,23 @@ body {
 }
 
 .contenido-destacadas .titulo-seccion {
-    /* CAMBIO: Color del título a azul oscuro para que coincida con el diseño */
-    color: #0B2B68;
-    margin-bottom: 3rem;
-    position: relative;
-    padding-bottom: 0.5rem;
+  /* CAMBIO: Color del título a azul oscuro para que coincida con el diseño */
+  color: #0B2B68;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
 /* Elemento para la línea azul oscura debajo del título */
 .contenido-destacadas .titulo-seccion::after {
-    content: '';
-    display: block;
-    width: 150px;
-    height: 4px;
-    margin: 0.3rem auto 0;
-    border-radius: 2px;
+  content: '';
+  display: block;
+  width: 150px;
+  height: 4px;
+  margin: 0.3rem auto 0;
+  border-radius: 2px;
+  background-color: #0B2B68;
+  animation: expandWidth 1s ease-out;
 }
 
 .grid-actividades {
@@ -435,7 +471,12 @@ body {
   transition: all 0.4s ease;
   /* Borde sólido claro como se ve en el diseño */
   border: 2px solid #110e0e;
+  animation: deslizarArriba 0.8s ease-out backwards;
 }
+
+.tarjeta-actividad:nth-child(1) { animation-delay: 0.2s; }
+.tarjeta-actividad:nth-child(2) { animation-delay: 0.4s; }
+.tarjeta-actividad:nth-child(3) { animation-delay: 0.6s; }
 
 .tarjeta-actividad:hover {
   transform: translateY(-8px);
@@ -459,7 +500,7 @@ body {
 }
 
 .tarjeta-actividad:hover .imagen-actividad img {
-  transform: scale(1.1);
+  transform: scale(1.1) rotateZ(-0.5deg);
 }
 
 .info-actividad {
@@ -507,7 +548,7 @@ body {
   /* Ajustando hover para el amarillo/naranja */
   background: #b45309;
   color: white; /* Color de texto blanco al hacer hover */
-  transform: scale(1.05);
+  transform: scale(1.05) translateX(3px);
 }
 /* ---------------------------------------------------- */
 /* Fin Sección 5 */
@@ -545,12 +586,16 @@ body {
   transition: all 0.3s ease;
   border-left: 4px solid #0891b2;
     border: 2px solid #110909; ;
-
+    animation: rotateIn 0.8s ease-out backwards;
 }
 
+.tarjeta-testimonio:nth-child(1) { animation-delay: 0.2s; }
+.tarjeta-testimonio:nth-child(2) { animation-delay: 0.4s; }
+
 .tarjeta-testimonio:hover {
-  transform: translateX(5px);
+  transform: translateX(5px) scale(1.01);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: #F4C21C;
 }
 
 .avatar {
@@ -566,6 +611,7 @@ body {
   font-weight: bold;
   flex-shrink: 0;
   font-size: 1.2rem;
+  animation: colorPulse 5s infinite alternate;
 }
 
 .contenido-testimonio h4 {
@@ -586,12 +632,14 @@ body {
   background: linear-gradient(135deg, #64B8E4 0%, #64B8E4 100%);
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .contenido-cta {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
+  animation: fadeInUp 1s ease-out;
 }
 
 .contenido-cta h2 {
@@ -625,8 +673,8 @@ body {
 
 .boton-cta:hover {
   background: #b45309;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(217, 119, 6, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(217, 119, 6, 0.4), 0 0 15px rgba(255, 255, 255, 0.8) inset;
 }
 
 /* Sección 8: Footer */
@@ -634,6 +682,7 @@ body {
   background: #1647A4;
   color: white;
   padding: 3rem 0 1rem;
+  animation: slideUp 0.8s ease-out;
 }
 
 .contenido-footer {
@@ -680,12 +729,14 @@ body {
 .columna-enlaces a {
   color: #ccc;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
 .columna-enlaces a:hover {
   /* Actualizando color hover de enlaces */
   color: #0891b2;
+  transform: translateX(5px);
 }
 
 .copyright {
@@ -728,6 +779,147 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* Nuevas animaciones añadidas */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinPulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+    color: white;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    color: #F4C21C;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    color: white;
+  }
+}
+
+@keyframes pulseOnce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes backgroundBreathing {
+  0% {
+    background: linear-gradient(135deg, #0891b2 0%, #67e8f9 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #0f7690 0%, #3fe6ff 100%);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 150px;
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseOutline {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(244, 194, 28, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(244, 194, 28, 0);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-5deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(0deg) translateY(0);
+  }
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    background: #4CAF50;
+  }
+  50% {
+    background: #81C784;
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  45% {
+    transform: translateX(-3px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-1px);
   }
 }
 
@@ -793,6 +985,7 @@ body {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  animation: wobble 1s ease-in-out 1;
 }
 
 .resultados-busqueda h3 {
@@ -805,7 +998,7 @@ body {
   padding: 0.8rem;
   border-bottom: 1px solid #e5e7eb;
   color: #374151;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .resultado-item:last-child {
@@ -815,4 +1008,5 @@ body {
 .resultado-item:hover {
   background-color: #f9fafb;
   border-radius: 8px;
+  transform: translateX(5px);
 }
